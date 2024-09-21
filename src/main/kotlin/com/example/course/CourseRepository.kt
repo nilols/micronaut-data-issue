@@ -1,5 +1,6 @@
-package com.example
+package com.example.course
 
+import com.example.student.Student
 import io.micronaut.data.annotation.Join
 import io.micronaut.data.model.query.builder.sql.Dialect
 import io.micronaut.data.r2dbc.annotation.R2dbcRepository

@@ -1,5 +1,10 @@
 package com.example
 
+import com.example.course.Course
+import com.example.course.CourseRepository
+import com.example.student.Student
+import com.example.student.StudentId
+import com.example.student.StudentRepository
 import io.micronaut.test.extensions.kotest5.annotation.MicronautTest
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.equals.shouldBeEqual

@@ -1,4 +1,4 @@
-package com.example
+package com.example.student
 
 import io.micronaut.core.convert.ConversionContext
 import io.micronaut.data.model.runtime.convert.AttributeConverter
@@ -8,7 +8,7 @@ import java.util.UUID
 data class StudentId(val id: UUID)
 
 @Singleton
-class StudentIdEntityConverter : AttributeConverter<StudentId, UUID> {
+class StudentIdAttributeConverter : AttributeConverter<StudentId, UUID> {
     override fun convertToPersistedValue(entityValue: StudentId?, context: ConversionContext?): UUID? {
         return entityValue?.id
     }

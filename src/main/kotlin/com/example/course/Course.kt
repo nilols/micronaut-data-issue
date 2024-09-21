@@ -1,12 +1,13 @@
-package com.example
+package com.example.course
 
+import com.example.student.Student
 import io.micronaut.data.annotation.Id
 import io.micronaut.data.annotation.MappedEntity
 import io.micronaut.data.annotation.Relation
-import io.micronaut.serde.annotation.Serdeable
+import io.micronaut.data.annotation.Relation.Cascade.ALL
+import io.micronaut.data.annotation.Relation.Kind.MANY_TO_MANY
 import java.util.UUID
 
-@Serdeable
 @MappedEntity
 data class Course(
 
@@ -15,6 +16,6 @@ data class Course(
 
     val name: String,
 
-    @Relation(value = Relation.Kind.MANY_TO_MANY, mappedBy = "courses", cascade = [Relation.Cascade.ALL])
+    @Relation(value = MANY_TO_MANY, mappedBy = "courses", cascade = [ALL])
     val students: List<Student>
 )
